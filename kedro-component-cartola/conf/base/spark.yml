@@ -1,0 +1,4 @@
+spark.master: "local[*]"
+spark.driver.maxResultSize: 3g
+spark.sql.execution.arrow.pyspark.enabled: true
+spark.scheduler.mode: FAIR

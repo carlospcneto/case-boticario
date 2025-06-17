@@ -1,0 +1,59 @@
+_spark_dataset: &_spark_dataset
+  type: spark.SparkDataset
+  file_format: parquet
+  save_args:
+    mode: overwrite
+
+# 01_raw
+
+raw_pix:
+  <<: *_spark_dataset
+  filepath: data/01_raw/raw_pix
+
+raw_ted:
+  <<: *_spark_dataset
+  filepath: data/01_raw/raw_ted
+
+raw_doc:
+  <<: *_spark_dataset
+  filepath: data/01_raw/raw_doc
+
+# 02_intermeadiate
+
+raw_campanhas:
+  <<: *_spark_dataset
+  filepath: data/02_intermediate/campanhas
+
+raw_riscos:
+  <<: *_spark_dataset
+  filepath: data/02_intermediate/riscos
+
+cartola_table:
+  <<: *_spark_dataset
+  filepath: data/02_intermediate/cartola
+
+# 03_processed
+
+financial_features:
+  <<: *_spark_dataset
+  filepath: data/03_processed/financial
+
+behavioral_features:
+  <<: *_spark_dataset
+  filepath: data/03_processed/behavioral
+
+agg_financial_features:
+  <<: *_spark_dataset
+  filepath: data/03_processed/agg_financial
+
+# 04_model_input
+
+master_table:
+  <<: *_spark_dataset
+  filepath: data/04_model_input/master_table
+
+# 05_score
+
+score_table:
+  <<: *_spark_dataset
+  filepath: data/05_score/score_table
