@@ -40,3 +40,6 @@ attr = "kedro_component_cartola.__version__"
 [tool.setuptools.packages.find]
 where = [ "src",]
 namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "985c865297c649f88c10e379c21d5c53"

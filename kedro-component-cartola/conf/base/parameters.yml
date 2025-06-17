@@ -1,0 +1,5 @@
+prod: False
+end_date: "2024-06-30"
+days_to_evaluate: 180
+number_of_folds: 3
+threshold: 0.85

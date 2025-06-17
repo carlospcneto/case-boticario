@@ -1,0 +1,17 @@
+server:
+  mlflow_tracking_uri: ./mlruns
+  mlflow_registry_uri: null
+
+tracking:
+  experiment:
+    name: kedro_component_cartola
+  disable_tracking:
+    disable_autologging: True
+    pipelines: []
+  run:
+    id: null
+    name: xgboost_model
+
+ui:
+  port: "5000"
+  host: "127.0.0.1"
